@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,7 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 @theme {
-  --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif,
+  --font-sans: Comfortaa, Figtree, ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -25,4 +27,31 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+/*
+  Customize my app for better adaptablity
+*/
+
+.title-app-layout-container {
+    background-color: white;
+    width: 100%;
+    padding: 17px 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    min-height: 60px;
+}
+
+.title-app-layout-container .back-button {
+    position: absolute;
+    top: 23px;
+    left: 12px;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .title-app-layout-container {
+        padding-left: 20px !important;
+    }
 }

@@ -11,18 +11,20 @@
 
     @stack('styles')
 </head>
-<body>
-    <header class="bg-primary text-white p-3 text-center">
-        <h1>Mi Aplicación</h1>
-    </header>
+<body class="font-comfortaa text-gray-900 antialiased">
 
-    <main>
-        @yield('content')
-    </main>
+    <div class="min-h-screen bg-gray-100">
+        @include('layouts.navbar')
 
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        &copy; {{ date('Y') }} Mi Aplicación. Todos los derechos reservados.
-    </footer>
+        <main>
+            @if ((isset($back) && $back) || (isset($title) && $title))
+                @include('layouts.header-title-layout')
+            @endif
+            <div class="{{ (isset($back) && $back) || (isset($title) && $title) ? 'mt-6' : 'mt-0' }}">
+                {{ $slot }}
+            </div>
+        </main>
+    </div>
 
     <!-- Scripts de JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
