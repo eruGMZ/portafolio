@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Mi Aplicación')</title>
+    <title>@yield('title', config('app.name'))</title>
 
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
