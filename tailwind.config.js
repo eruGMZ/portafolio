@@ -17,7 +17,8 @@ export default {
     			sans: [
     				'Figtree',
                     ...defaultTheme.fontFamily.sans
-                ]
+                ],
+				comfortaa: ['"Comfortaa"', 'sans-serif'],
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
